@@ -435,6 +435,20 @@ p {
     }
 }
 
+@media screen and (max-width: 376px) {
+    .intro p {
+        width: 80%;
+    }
+
+    #slide7 h1,
+    #slide8 h1,
+    #slide9 h1,
+    #slide10 h1,
+    #slide11 h1 {
+        font-size: 1.4em;
+    }
+}
+
 /* End Of About Us */
 
 
@@ -470,4 +484,11 @@ p {
     }
 }
 
-/* End Of About Us */
+@media screen and (max-width: 376px) {
+    #contactUsContent div {
+        font-size: .45em;
+        margin: 50px 0 0 2px;
+    }
+}
+
+/* End Of Contact Us */
