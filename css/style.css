@@ -155,7 +155,7 @@ acronym {
 }
 
 .nav-link {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
     color: #336b70 !important;
     font-family: "Steelfish", cursive;
     padding: 0;
@@ -325,8 +325,6 @@ p {
 
 
 
-
-
 /* =========== */
 /* RESPONSIVE */
 /* =========== */
@@ -341,7 +339,7 @@ p {
 
     #logotvoa,
     #logoIG {
-        padding: 10px;
+        padding: 5px;
     }
 }
 
