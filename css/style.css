@@ -1,6 +1,6 @@
 /* Stylesheet Televisionair 5.0 */
 
-@CHARSET "ISO-8859-1";
+/* @CHARSET "ISO-8859-1"; */
 
 @import url("https://fonts.googleapis.com/css?family=Big+Shoulders+Text|Oswald&display=swap");
 
@@ -257,6 +257,7 @@ p {
 #slide4 p {
     color: #faf7f4;
     margin-bottom: -20px;
+    text-shadow: 4px 5px 2px rgba(0, 0, 0, .8);
 }
 
 /* About Us */
@@ -322,6 +323,102 @@ p {
     color: #e37a25;
 }
 
+/* ================= */
+/* Background Assets */
+/* ================= */
+
+/* Activities */
+#slide1 .intro,
+#slide2,
+#slide3,
+#slide4,
+#slide5 {
+    position: relative;
+}
+
+#bg-1 img {
+    position: absolute;
+    width: 2200px;
+    height: 1800px;
+    top: -950px;
+    left: -150px;
+    filter: contrast(1.2);
+    z-index: -1;
+}
+
+#bg-2 img {
+    position: absolute;
+    width: 2100px;
+    height: 2000px;
+    top: -700px;
+    right: -890px;
+    box-shadow: 0 0 0 0 transparent !important;
+    border: none;
+    z-index: -1;
+}
+
+#bg-3 img {
+    /* Bird */
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    top: 20px;
+    right: 30px;
+    box-shadow: 0 0 0 0 transparent !important;
+    filter: brightness(5);
+    border: none;
+    z-index: -1;
+}
+
+#bg-4 img {
+    /* Circle */
+    position: absolute;
+    width: 250px;
+    height: 300px;
+    top: 390px;
+    left: 50px;
+    box-shadow: 0 0 0 0 transparent !important;
+    filter: drop-shadow(0 0 7px rgba(0, 0, 0, .8)) contrast(1.4);
+    border: none;
+    z-index: -1;
+}
+
+#bg-5 img {
+    position: absolute;
+    width: 2300px;
+    height: 2000px;
+    top: -700px;
+    right: -1200px;
+    box-shadow: 0 0 0 0 transparent !important;
+    border: none;
+    transform: rotate(-10deg);
+    z-index: -1;
+}
+
+#bg-6 img {
+    position: absolute;
+    width: 2300px;
+    height: 2000px;
+    top: -630px;
+    right: -1200px;
+    box-shadow: 0 0 0 0 transparent !important;
+    border: none;
+    z-index: -1;
+}
+
+#bg-7 img {
+    position: absolute;
+    width: 2000px;
+    height: 2000px;
+    top: -900px;
+    right: -900px;
+    box-shadow: 0 0 0 0 transparent !important;
+    border: none;
+    transform: rotate(-20deg);
+    z-index: -1;
+}
+
+/* About Us */
 
 
 
@@ -368,6 +465,11 @@ p {
     #slide3 p,
     #slide4 p {
         font-size: 1.5em;
+    }
+
+    #bg-3 img,
+    #bg-4 img {
+        display: none;
     }
 }
 

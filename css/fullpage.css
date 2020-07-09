@@ -93,12 +93,22 @@ html.fp-enabled,
     width: 0;
     border-width: 38.5px 34px 38.5px 0;
     border-color: transparent #fff transparent transparent;
+    transition: .4s;
+}
+
+.fp-controlArrow.fp-prev:hover {
+    border-color: transparent #f37208 transparent transparent;
 }
 
 .fp-controlArrow.fp-next {
     right: 15px;
     border-width: 38.5px 0 38.5px 34px;
     border-color: transparent transparent transparent #fff;
+    transition: .4s;
+}
+
+.fp-controlArrow.fp-next:hover {
+    border-color: transparent transparent transparent #f37208;
 }
 
 @media screen and (max-width: 767px) {
@@ -134,6 +144,7 @@ html.fp-enabled,
     top: 50%;
     opacity: 1;
     -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
 }
 
 #fp-nav.fp-right {
