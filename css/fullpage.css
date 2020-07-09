@@ -97,7 +97,7 @@ html.fp-enabled,
 }
 
 .fp-controlArrow.fp-prev:hover {
-    border-color: transparent #f37208 transparent transparent;
+    border-color: transparent #f08228 transparent transparent;
 }
 
 .fp-controlArrow.fp-next {
@@ -108,7 +108,7 @@ html.fp-enabled,
 }
 
 .fp-controlArrow.fp-next:hover {
-    border-color: transparent transparent transparent #f37208;
+    border-color: transparent transparent transparent #f08228;
 }
 
 @media screen and (max-width: 767px) {
