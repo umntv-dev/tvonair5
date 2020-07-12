@@ -1,356 +1,467 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Televisionair 5.0</title>
+    <!-- <meta name="author" content="Alvaro Trigo Lopez" /> -->
+    <meta
+      name="description"
+      content="fullPage full-screen navigation and sections control menu."
+    />
+    <meta
+      name="keywords"
+      content="fullpage,jquery,demo,screen,fullscreen,navigation,control arrows, dots"
+    />
+    <meta name="Resource-type" content="Document" />
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title> Televisionair 5.0 </title>
-  <!-- <meta name="author" content="Alvaro Trigo Lopez" /> -->
-  <meta name="description" content="fullPage full-screen navigation and sections control menu." />
-  <meta name="keywords" content="fullpage,jquery,demo,screen,fullscreen,navigation,control arrows, dots" />
-  <meta name="Resource-type" content="Document" />
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      href="assets/images/favicon.png"
+      type="image/png"
+      sizes="16x16"
+    />
 
-  <!-- Favicon -->
-  <link rel="icon" href="assets/images/favicon.png" type="image/png" sizes="16x16" />
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    />
 
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Fjalla+One&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- Font Awesome -->
-  <link href="https://fonts.googleapis.com/css?family=Fjalla+One&display=swap" rel="stylesheet" />
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 
-  <!-- jQuery -->
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <!-- Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
 
-  <!-- Popper.js -->
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 
-  <!-- Bootstrap JS -->
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <!-- fullpage.js CSS -->
+    <link rel="stylesheet" type="text/css" href="css/fullpage.css" />
 
-  <!-- fullpage.js CSS -->
-  <link rel="stylesheet" type="text/css" href="css/fullpage.css" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
 
-  <!-- Custom CSS -->
-  <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <!--[if IE]>
+      <script type="text/javascript">
+        var console = { log: function () {} };
+      </script>
+    <![endif]-->
+  </head>
 
-  <!--[if IE]>
-    <script type="text/javascript">
-      var console = { log: function() {} };
-    </script>
-  <![endif]-->
-</head>
+  <body>
+    <!-- Navbar -->
+    <!-- <div id="header"> -->
+    <nav
+      class="navbar navbar-expand-lg px-4 py-1 navbar-light justify-content-between"
+      id="navbar"
+    >
+      <span class="nav-item" id="logotvoa">
+        <img src="assets/images/TV-Logo.png" width="50px;" />
+      </span>
 
-<body>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-  <!-- Navbar -->
-  <!-- <div id="header"> -->
-  <nav class="navbar navbar-expand-lg px-4 py-1 navbar-light justify-content-between" id="navbar">
-    <span class="nav-item" id="logotvoa">
-      <img src="assets/images/TV-Logo.png" width="50px;" />
-    </span>
-
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-      <ul class="navbar-nav justify-content-around">
-        <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
-          <a class="nav-link font-blue" href="#home"> Home</a>
-        </li>
-        <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
-          <a class="nav-link font-blue" href="#activities"> Activities</a>
-        </li>
-        <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
-          <a class="nav-link font-blue" href="#aboutus"> About Us</a>
-        </li>
-        <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
-          <a class="nav-link font-blue" href="#contactus"> Contact Us</a>
-        </li>
-      </ul>
-    </div>
-
-    <span class="nav-item d-none d-md-block" id="logoIG">
-      <a href="https://www.instagram.com/televisi.onair" target="_blank"><img src="assets/images/logo-ig.png"
-          width="30px;" /></a>
-    </span>
-  </nav>
-  <!-- </div> -->
-  <!-- End Navbar -->
-
-  <!-- Start Content -->
-  <div id="fullpage">
-    <!-- Home -->
-    <div class="section" id="section0">
-      <div class="row justify-content-center full-height align-content-center m-auto" id="home">
-        <div class="col-10 col-md-5">
-          <img src="assets/images/Tagline.png" alt="tagline" class="img-fluid" />
-        </div>
+      <div
+        class="collapse navbar-collapse justify-content-center"
+        id="navbarNav"
+      >
+        <ul class="navbar-nav justify-content-around">
+          <li
+            class="nav-item"
+            data-toggle="collapse"
+            data-target=".navbar-collapse.show"
+          >
+            <a class="nav-link font-blue" href="#home"> Home</a>
+          </li>
+          <li
+            class="nav-item"
+            data-toggle="collapse"
+            data-target=".navbar-collapse.show"
+          >
+            <a class="nav-link font-blue" href="#activities"> Activities</a>
+          </li>
+          <li
+            class="nav-item"
+            data-toggle="collapse"
+            data-target=".navbar-collapse.show"
+          >
+            <a class="nav-link font-blue" href="#aboutus"> About Us</a>
+          </li>
+          <li
+            class="nav-item"
+            data-toggle="collapse"
+            data-target=".navbar-collapse.show"
+          >
+            <a class="nav-link font-blue" href="#contactus"> Contact Us</a>
+          </li>
+        </ul>
       </div>
-    </div>
-    <!-- End of Home -->
 
-    <!-- Activities -->
-    <div class="section" id="section1">
-      <div class="slide" id="slide1">
-        <div class="intro">
-          <h1>
-            Activities
-          </h1>
-          <div id="bg-1">
-            <img src="assets/images/bg/asset-01.png" alt="Background">
+      <span class="nav-item d-none d-md-block" id="logoIG">
+        <a href="https://www.instagram.com/televisi.onair" target="_blank"
+          ><img src="assets/images/logo-ig.png" width="30px;"
+        /></a>
+      </span>
+    </nav>
+    <!-- </div> -->
+    <!-- End Navbar -->
+
+    <!-- Start Content -->
+    <div id="fullpage">
+      <!-- Home -->
+      <div class="section" id="section0">
+        <div
+          class="row justify-content-center full-height align-content-center m-auto"
+          id="home"
+        >
+          <div class="col-10 col-md-5">
+            <img
+              src="assets/images/Tagline.png"
+              alt="tagline"
+              class="img-fluid"
+            />
           </div>
         </div>
       </div>
+      <!-- End of Home -->
 
-      <div class="slide" id="slide2">
-        <a href="https://ultimagz.com/berita-kampus/think-wisely-act-differently-membuat-konten-yang-menarik-dan-bermanfaat-di-era-digital/"
-          target="_blank">
-          <img class="img-fluid" src="assets/images/televisionair2019-1.jpg" alt="Think Wisely" />
-        </a>
-        <p class="mt-3">Think Wisely Act Differently</p>
-        <div id="bg-2">
-          <img src="assets/images/bg/asset-04.png" alt="Background">
-        </div>
-        <div id="bg-3">
-          <img src="assets/images/bg/umntv-website (1)-03.png" alt="Bird">
-        </div>
-        <div id="bg-4">
-          <img src="assets/images/bg/umntv-website (1)-02.png" alt="Circle">
-        </div>
-      </div>
-
-      <div class="slide" id="slide3">
-        <a href="https://ultimagz.com/berita-kampus/info-kampus/najwa-shihab-ajak-jurnalis-muda-hadapi-revolusi-media-di-era-digital/"
-          target="_blank">
-          <img class="img-fluid" src="assets/images/televisionair2019-2.jpg" alt="Najwa Shihab" />
-        </a>
-        <p class="mt-3">Menghadapi Revolusi Media</p>
-        <div id="bg-5">
-          <img src="assets/images/bg/asset-02.png" alt="Background">
-        </div>
-      </div>
-
-      <div class=" slide" id="slide4">
-        <a href=" https://www.umn.ac.id/umn-tv-hadirkan-najwa-shihab-dalam-acara-pembuka-televisionair-2019/"
-          target="_blank">
-          <img class="img-fluid" src="assets/images/televisionair2019-3.jpg" alt="Najwa Shihab" />
-        </a>
-        <p class="mt-3">People and Stories</p>
-        <div id="bg-6">
-          <img src="assets/images/bg/asset-02.png" alt="Background">
-        </div>
-      </div>
-
-      <div class="slide" id="slide5">
-        <h1>Video TVOA Tahun Lalu</h1>
-        <p>Keterangan</p>
-        <div id="bg-7">
-          <img src="assets/images/bg/asset-05.png" alt="Background">
-        </div>
-      </div>
-    </div>
-    <!-- End of Activities -->
-
-    <!-- About Us -->
-    <div class="section" id="section2">
-      <div class="intro">
-        <div class="slide" id="slide6">
+      <!-- Activities -->
+      <div class="section" id="section1">
+        <div class="slide" id="slide1">
           <div class="intro">
-            <h1 class="mb-4">About Us</h1>
-            <p>
-              TELEVISIONAIR merupakan acara tahunan yang diadakan oleh UMN TV. Acara ini pertama kali
-              diadakan
-              Maret 2016 dengan dukungan penuh dari AJI (Aliansi Jurnalis Independen). Awalnya,
-              TELEVISIONAIR
-              memiliki tujuan merangkul media-media kampus, terutama TV kampus se-Jabodetabek untuk
-              belajar
-              bersama mengenai pertelevisian dan penyiaran, sekaligus menciptakan sebuah standar yang
-              harus
-              dicapai bagi semua media kampus se-Jabodetabek. TELEVISIONAIR akhirnya menjadi tempat
-              terbentuk
-              dan disahkannya organisasi pertama yang menjadi rumah bagi media televisi kampus di
-              Indonesia:
-              ATKI (Asosiasi Televisi Kampus Indonesia).
-            </p>
-            <div id="bg-8">
-              <img src="assets/images/bg/asset-01.png" alt="Background">
-            </div>
-            <div id="bg-9">
-              <img src="assets/images/bg/umntv-website (1)-04.png" alt="Person">
+            <h1>
+              Activities
+            </h1>
+            <div id="bg-1">
+              <img src="assets/images/bg/asset-01.png" alt="Background" />
             </div>
           </div>
         </div>
 
-        <div class="slide" id="slide7">
-          <h1>2016 : TELEVISIONAIR "Gelora Muda - Sinergikan Kreasimu”</h1>
-          <div>
-            <ul>
-              <li>Memunculkan semangat anak muda untuk mengelola media kampus dengan berbagai kreasi.
-              </li>
-              <li>Didukung oleh AJI dan Komunitas GoPro ID.</li>
-              <li>Dihadiri oleh CNN TV Indonesia, Kompas TV, Dji Phantom Indonesia, Dandhy D. Laksono
-                (Watchdoc), dan Google Indonesia.</li>
-            </ul>
+        <div class="slide" id="slide2">
+          <a
+            href="https://ultimagz.com/berita-kampus/think-wisely-act-differently-membuat-konten-yang-menarik-dan-bermanfaat-di-era-digital/"
+            target="_blank"
+          >
+            <img
+              class="img-fluid activity-display"
+              src="assets/images/televisionair2019-1.jpg"
+              alt="Think Wisely"
+            />
+          </a>
+          <p class="mt-3">Think Wisely Act Differently</p>
+          <div id="bg-2">
+            <img src="assets/images/bg/asset-04.png" alt="Background" />
           </div>
-          <div id="bg-10">
-            <img src="assets/images/bg/asset-02.png" alt="Background">
+          <div id="bg-3">
+            <img src="assets/images/bg/umntv-website (1)-03.png" alt="Bird" />
           </div>
-        </div>
-
-        <div class="slide" id="slide8">
-          <h1>2017 : TELEVISIONAIR 2.0 “Mencari Jati Diri Televisi Kampus”</h1>
-          <ul>
-            <li>Mengajak TV kampus mengembangkan diri menjadi televisi alternatif untuk menyebarkan
-              informasi yang mengedukasi masyarakat luas.</li>
-            <li>Didukung oleh AJI dan VOA Indonesia.</li>
-            <li>Peresmian ATKI (Asosiasi Televisi Kampus Indonesia).</li>
-            <li>Dihadiri Alvin Adam (Just Alvin Metro TV) dan Frisca Clarissa (News Anchor NET. TV).
-            </li>
-          </ul>
-          <div id="bg-11">
-            <img src="assets/images/bg/asset-05.png" alt="Background">
+          <div id="bg-4">
+            <img src="assets/images/bg/umntv-website (1)-02.png" alt="Circle" />
           </div>
         </div>
 
-        <div class="slide" id="slide9">
-          <h1>2018 : TELEVISIONAIR 3.0 “Creativity Requires Courage”</h1>
-          <ul>
-            <li>Mengajak generasi muda untuk berani dan kreatif menyajikan informasi melalui media
-              sosial
-              dan sebagai media komunitas.</li>
-            <li>Didukung AJI dan bekerja sama dengan Google News Lab, VOA, dan ATKI.</li>
-            <li>Dihadiri oleh Pusat Kajian Media Remotivi, Alvin Qobulsyah (Produser NET. TV), Nadya
-              Kartika
-              (Produser iNews), Yulika Satya Daya (Produser Kompas Sport), Fellya Hartono (Reporter
-              NET.
-              TV), dan Rahma Hayuningdyah (News Anchor NET. TV).</li>
-          </ul>
-          <div id="bg-12">
-            <img src="assets/images/bg/asset-04.png" alt="Background">
+        <div class="slide" id="slide3">
+          <a
+            href="https://ultimagz.com/berita-kampus/info-kampus/najwa-shihab-ajak-jurnalis-muda-hadapi-revolusi-media-di-era-digital/"
+            target="_blank"
+          >
+            <img
+              class="img-fluid activity-display"
+              src="assets/images/televisionair2019-2.jpg"
+              alt="Najwa Shihab"
+            />
+          </a>
+          <p class="mt-3">Menghadapi Revolusi Media</p>
+          <div id="bg-5">
+            <img src="assets/images/bg/asset-02.png" alt="Background" />
           </div>
         </div>
 
-        <div class="slide" id="slide10">
-          <h1>2019 : TELEVISIONAIR 2019 “Buzzing the Revolution”</h1>
-          <ul>
-            <li>Mendengungkan semangat revolusi media kepada generasi Z.</li>
-            <li>Didukung oleh Narasi TV dan AJI.</li>
-            <li>Dihadiri oleh Najwa Shihab (Founder of Narasi TV), Anjas Maradita (Content Creator),
-              Aftian
-              Saputra Siswoyo ( Creative content creator of Narasi TV), Thomas Herda (Producer of NET
-              CJ),
-              Andi Muhyiddin (General Manager Kapanlagi Youniverse), Stella Nau (Former Reporter Metro
-              TV), Aprillyanti Sirat (Assignment Editor CNN Indonesia TV), Senoaji Julius (Director
-              Writer
-              & Film Director), Suluh Pamuji (Creator KDM & Program Director), Makbul Mubarak (Film
-              Director), M. Iqbal Arrunuri (Associate Creative for Noxus Ideata Prima), Irwan
-              Fakhrudin
-              (Graphic Designer & Consultant Branding), Imamul Masyhudi (Design Manager in Sindo
-              Newspaper), dan Yovita (UMN TV 2nd Gen General Manage).</li>
-          </ul>
-          <div id="bg-13">
-            <img src="assets/images/bg/asset-01.png" alt="Background">
+        <div class="slide" id="slide4">
+          <a
+            href=" https://www.umn.ac.id/umn-tv-hadirkan-najwa-shihab-dalam-acara-pembuka-televisionair-2019/"
+            target="_blank"
+          >
+            <img
+              class="img-fluid"
+              src="assets/images/televisionair2019-3.jpg"
+              alt="Najwa Shihab"
+            />
+          </a>
+          <p class="mt-3">People and Stories</p>
+          <div id="bg-6">
+            <img src="assets/images/bg/asset-02.png" alt="Background" />
           </div>
         </div>
 
-        <div class="slide" id="slide11">
-          <h1>2020 : TELEVISIONAIR 5.0 “Reverse to Innovate"</h1>
-          <ul>
-            <li>Mengajak media untuk kembali berinovasi dan tetap konsisten.</li>
-            <li>Didukung oleh Narasi TV dan AJI.</li>
-            <li>Dihadiri oleh Najwa Shihab (Founder of Narasi TV), Wisnu Nugroho (Pemred Kompas.com),
-              Denny
-              Wirya Tama (Pemimpin umum UMNTV GEN 5), Joni (AJI), ATKI, Ernest Prakasa (Aktor,
-              produser),
-              Pemimpin redaksi tempo, Andy F Noya (Jurnalis), Nadia Soekarno (Jurnalis), Arief
-              Muhammad
-              (Content Creator), dan Ardyan M. Erlangga (Managing Editor VICE Indonesia).</li>
-          </ul>
-          <div id="bg-14">
-            <img src="assets/images/bg/asset-02.png" alt="Background">
-          </div>
-          <div id="bg-15">
-            <img src="assets/images/bg/umntv-website (1)-02.png" alt="Circle">
+        <div class="slide" id="slide5">
+          <iframe
+            src="https://www.youtube.com/embed/7Ivx2wLSbdU"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+          <p>The Aftermovie</p>
+          <div id="bg-7">
+            <img src="assets/images/bg/asset-05.png" alt="Background" />
           </div>
         </div>
       </div>
-    </div>
-    <!-- End of About Us -->
+      <!-- End of Activities -->
 
-    <!-- Contact Us -->
-    <div class="section" id="section3">
-      <div class="container">
-        <div class="row justify-content-around py-3">
-          <div class="col-11 col-md-6 py-md-2" id="contactUsLogo">
-            <img class="img-fluid" src="assets/images/contact.png" alt="Contact Us" />
+      <!-- About Us -->
+      <div class="section" id="section2">
+        <div class="intro">
+          <div class="slide" id="slide6">
+            <div class="intro">
+              <h1 class="mb-4">About Us</h1>
+              <p>
+                TELEVISIONAIR merupakan acara tahunan yang diadakan oleh UMN TV.
+                Acara ini pertama kali diadakan Maret 2016 dengan dukungan penuh
+                dari AJI (Aliansi Jurnalis Independen). Awalnya, TELEVISIONAIR
+                memiliki tujuan merangkul media-media kampus, terutama TV kampus
+                se-Jabodetabek untuk belajar bersama mengenai pertelevisian dan
+                penyiaran, sekaligus menciptakan sebuah standar yang harus
+                dicapai bagi semua media kampus se-Jabodetabek. TELEVISIONAIR
+                akhirnya menjadi tempat terbentuk dan disahkannya organisasi
+                pertama yang menjadi rumah bagi media televisi kampus di
+                Indonesia: ATKI (Asosiasi Televisi Kampus Indonesia).
+              </p>
+              <div id="bg-8">
+                <img src="assets/images/bg/asset-01.png" alt="Background" />
+              </div>
+              <div id="bg-9">
+                <img
+                  src="assets/images/bg/umntv-website (1)-04.png"
+                  alt="Person"
+                />
+              </div>
+            </div>
           </div>
-          <div class="col-11 col-md-6" id="contactUsContent">
-            <h1>Contact Us</h1>
+
+          <div class="slide" id="slide7">
+            <h1>2016 : TELEVISIONAIR "Gelora Muda - Sinergikan Kreasimu”</h1>
             <div>
-              <table>
-                <tr>
-                  <td>
-                    <p class="m-0">Line</p>
-                  </td>
-                  <td>
-                    <p class="m-0 line">&nbsp;&nbsp;&nbsp;: &nbsp;<a
-                        href="http://line.me/ti/p/~@bmq5069o" target="_blank">@bmq5069o</a>
-                    </p>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <p class="m-0">Instagram</p>
-                  </td>
-                  <td>
-                    <p class="m-0 ig">&nbsp;&nbsp;&nbsp;: &nbsp;<a
-                        href="https://www.instagram.com/televisi.onair/?hl=en"
-                        target="_blank">@televisionair</a>
-                    </p>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <p class="m-0">Email</p>
-                  </td>
-                  <td>
-                    <p class="m-0 email">&nbsp;&nbsp;&nbsp;: &nbsp;&nbsp;<a
-                        href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=televisionair5.0@gmail.com"
-                        target="_blank">televisionair5.0@gmail.com</a>
-                    </p>
-                  </td>
-                </tr>
-              </table>
+              <ul>
+                <li>
+                  Memunculkan semangat anak muda untuk mengelola media kampus
+                  dengan berbagai kreasi.
+                </li>
+                <li>Didukung oleh AJI dan Komunitas GoPro ID.</li>
+                <li>
+                  Dihadiri oleh CNN TV Indonesia, Kompas TV, Dji Phantom
+                  Indonesia, Dandhy D. Laksono (Watchdoc), dan Google Indonesia.
+                </li>
+              </ul>
             </div>
-            <h3><b>Tangerang, Indonesia</b></h3>
+            <div id="bg-10">
+              <img src="assets/images/bg/asset-02.png" alt="Background" />
+            </div>
+          </div>
+
+          <div class="slide" id="slide8">
+            <h1>
+              2017 : TELEVISIONAIR 2.0 “Mencari Jati Diri Televisi Kampus”
+            </h1>
+            <ul>
+              <li>
+                Mengajak TV kampus mengembangkan diri menjadi televisi
+                alternatif untuk menyebarkan informasi yang mengedukasi
+                masyarakat luas.
+              </li>
+              <li>Didukung oleh AJI dan VOA Indonesia.</li>
+              <li>Peresmian ATKI (Asosiasi Televisi Kampus Indonesia).</li>
+              <li>
+                Dihadiri Alvin Adam (Just Alvin Metro TV) dan Frisca Clarissa
+                (News Anchor NET. TV).
+              </li>
+            </ul>
+            <div id="bg-11">
+              <img src="assets/images/bg/asset-05.png" alt="Background" />
+            </div>
+          </div>
+
+          <div class="slide" id="slide9">
+            <h1>2018 : TELEVISIONAIR 3.0 “Creativity Requires Courage”</h1>
+            <ul>
+              <li>
+                Mengajak generasi muda untuk berani dan kreatif menyajikan
+                informasi melalui media sosial dan sebagai media komunitas.
+              </li>
+              <li>
+                Didukung AJI dan bekerja sama dengan Google News Lab, VOA, dan
+                ATKI.
+              </li>
+              <li>
+                Dihadiri oleh Pusat Kajian Media Remotivi, Alvin Qobulsyah
+                (Produser NET. TV), Nadya Kartika (Produser iNews), Yulika Satya
+                Daya (Produser Kompas Sport), Fellya Hartono (Reporter NET. TV),
+                dan Rahma Hayuningdyah (News Anchor NET. TV).
+              </li>
+            </ul>
+            <div id="bg-12">
+              <img src="assets/images/bg/asset-04.png" alt="Background" />
+            </div>
+          </div>
+
+          <div class="slide" id="slide10">
+            <h1>2019 : TELEVISIONAIR 2019 “Buzzing the Revolution”</h1>
+            <ul>
+              <li>Mendengungkan semangat revolusi media kepada generasi Z.</li>
+              <li>Didukung oleh Narasi TV dan AJI.</li>
+              <li>
+                Dihadiri oleh Najwa Shihab (Founder of Narasi TV), Anjas
+                Maradita (Content Creator), Aftian Saputra Siswoyo ( Creative
+                content creator of Narasi TV), Thomas Herda (Producer of NET
+                CJ), Andi Muhyiddin (General Manager Kapanlagi Youniverse),
+                Stella Nau (Former Reporter Metro TV), Aprillyanti Sirat
+                (Assignment Editor CNN Indonesia TV), Senoaji Julius (Director
+                Writer & Film Director), Suluh Pamuji (Creator KDM & Program
+                Director), Makbul Mubarak (Film Director), M. Iqbal Arrunuri
+                (Associate Creative for Noxus Ideata Prima), Irwan Fakhrudin
+                (Graphic Designer & Consultant Branding), Imamul Masyhudi
+                (Design Manager in Sindo Newspaper), dan Yovita (UMN TV 2nd Gen
+                General Manage).
+              </li>
+            </ul>
+            <div id="bg-13">
+              <img src="assets/images/bg/asset-01.png" alt="Background" />
+            </div>
+          </div>
+
+          <div class="slide" id="slide11">
+            <h1>2020 : TELEVISIONAIR 5.0 “Reverse to Innovate"</h1>
+            <ul>
+              <li>
+                Mengajak media untuk kembali berinovasi dan tetap konsisten.
+              </li>
+              <li>Didukung oleh Narasi TV dan AJI.</li>
+              <li>
+                Dihadiri oleh Najwa Shihab (Founder of Narasi TV), Wisnu Nugroho
+                (Pemred Kompas.com), Denny Wirya Tama (Pemimpin umum UMNTV GEN
+                5), Joni (AJI), ATKI, Ernest Prakasa (Aktor, produser), Pemimpin
+                redaksi tempo, Andy F Noya (Jurnalis), Nadia Soekarno
+                (Jurnalis), Arief Muhammad (Content Creator), dan Ardyan M.
+                Erlangga (Managing Editor VICE Indonesia).
+              </li>
+            </ul>
+            <div id="bg-14">
+              <img src="assets/images/bg/asset-02.png" alt="Background" />
+            </div>
+            <div id="bg-15">
+              <img
+                src="assets/images/bg/umntv-website (1)-02.png"
+                alt="Circle"
+              />
+            </div>
           </div>
         </div>
       </div>
+      <!-- End of About Us -->
+
+      <!-- Contact Us -->
+      <div class="section" id="section3">
+        <div class="container">
+          <div class="row justify-content-around py-2">
+            <div class="col-12 col-md-5" id="contactUsLogo">
+              <img
+                class="img-fluid"
+                src="assets/images/contact.png"
+                alt="Contact Us"
+              />
+            </div>
+            <div class="col-12 col-md-7" id="contactUsContent">
+              <h1>Contact Us</h1>
+              <div>
+                <table>
+                  <tr>
+                    <td>
+                      <p class="m-0">Line</p>
+                    </td>
+                    <td>
+                      <p class="m-0 line">
+                        &nbsp;&nbsp;&nbsp;: &nbsp;<a
+                          href="http://line.me/ti/p/~@bmq5069o"
+                          target="_blank"
+                          >@bmq5069o</a
+                        >
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <p class="m-0">Instagram</p>
+                    </td>
+                    <td>
+                      <p class="m-0 ig">
+                        &nbsp;&nbsp;&nbsp;: &nbsp;<a
+                          href="https://www.instagram.com/televisi.onair/?hl=en"
+                          target="_blank"
+                          >@televisi.onair</a
+                        >
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <p class="m-0">Email</p>
+                    </td>
+                    <td>
+                      <p class="m-0 email">
+                        &nbsp;&nbsp;&nbsp;: &nbsp;<a
+                          href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=televisionair5.0@gmail.com"
+                          target="_blank"
+                          >televisionair5.0@gmail.com</a
+                        >
+                      </p>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+              <h3><b>Tangerang, Indonesia</b></h3>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End of Contact Us -->
     </div>
-    <!-- End of Contact Us -->
-  </div>
-  <!-- End Content -->
+    <!-- End Content -->
 
-  <script type="text/javascript" src="./js/fullpage.js"></script>
-  <script type="text/javascript" src="./js/script.js"></script>
+    <script type="text/javascript" src="./js/fullpage.js"></script>
+    <script type="text/javascript" src="./js/script.js"></script>
 
-  <script type="text/javascript">
-    var myFullpage = new fullpage("#fullpage", {
-      anchors: ["home", "activities", "aboutus", "contactus"],
-      sectionsColor: ["#faf7f4", "#013840", "#017172", "#faf7f4"],
-      responsiveWidth: 900,
-      continuousVertical: false,
-      slidesNavigation: true,
-      afterResponsive: function (isResponsive) {},
-      afterLoad: function (anchorLink, index) {},
-      onLeave: function (index, nextIndex, direction) {},
-    });
-  </script>
-
-</body>
-
+    <script type="text/javascript">
+      var myFullpage = new fullpage("#fullpage", {
+        anchors: ["home", "activities", "aboutus", "contactus"],
+        sectionsColor: ["#faf7f4", "#013840", "#017172", "#faf7f4"],
+        responsiveWidth: 900,
+        continuousVertical: false,
+        slidesNavigation: true,
+        afterResponsive: function (isResponsive) {},
+        afterLoad: function (anchorLink, index) {},
+        onLeave: function (index, nextIndex, direction) {},
+      });
+    </script>
+  </body>
 </html>
