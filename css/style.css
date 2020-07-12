@@ -198,7 +198,7 @@ p {
   text-align: justify;
   width: 65%;
   margin: 0 auto;
-  font-size: 1.5em;
+  font-size: 1.3em;
   color: #fff;
 }
 
@@ -440,7 +440,7 @@ p {
   position: absolute;
   width: 450px;
   height: 550px;
-  top: 35px;
+  top: 2px;
   right: -85px;
   filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.8));
   z-index: -1;
@@ -528,6 +528,7 @@ p {
 
 /* Activities */
 @media screen and (max-width: 890px) {
+
   #slide2 img,
   #slide3 img,
   #slide4 img,
@@ -539,6 +540,7 @@ p {
 }
 
 @media screen and (max-width: 600px) {
+
   #slide2 img,
   #slide3 img,
   #slide4 img,
@@ -619,7 +621,7 @@ p {
   }
 
   .slide ul {
-    padding: 0 42px;
+    padding: 0 35px;
   }
 
   #bg-8 img {
@@ -690,8 +692,23 @@ p {
 }
 
 @media screen and (max-width: 767px) {
+  #contactUsLogo img {
+    width: 300px;
+  }
+
   #contactUsContent h1 {
-    margin: -30px 0 30px 0;
+    margin: -50px 0 30px 0;
+    font-size: 2.5em;
+  }
+
+  #contactUsContent h3 {
+    font-size: 1.5em;
+    margin-top: 40px;
+  }
+
+  #contactUsContent div {
+    margin-top: 10px;
+    margin-left: 50px;
   }
 }
 
