@@ -113,9 +113,12 @@ html.fp-enabled,
 
 @media screen and (max-width: 767px) {
 
-    .fp-controlArrow.fp-prev,
+    .fp-controlArrow.fp-prev{
+      border-width: 8px 6px 8px 0;
+    }
     .fp-controlArrow.fp-next {
-        display: none;
+        /* display: none; */
+        border-width: 8px 0 8px 6px;
     }
 }
 
